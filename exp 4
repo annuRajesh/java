@@ -1,0 +1,56 @@
+package lab2;
+import java.util.Scanner;
+class Areashapes{
+	float base;
+	float height;
+	double radius;
+	float base1;
+	  float height1;
+	
+  void Area() {
+	  
+	  float area=(float) (0.5*base1*height1);
+	  System.out.println("Area of triangle of base "+base1+ "and height "+height1+" is "+area); 
+  }
+  float Area(float br,float l) {
+	  this.base=br;
+	  this.height=l;
+	  return br*l;
+  }
+  double Area(double r) {
+	  this.radius=r;
+	  return 3.14*r*r;
+  }
+	
+}
+
+public class Area {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		Areashapes t=new Areashapes();
+		System.out.println("Enter the base of triangle:");
+		t.base1=sc.nextFloat();
+		System.out.println("Enter the height of the triangle: ");
+		t.height1=sc.nextFloat();
+		
+		
+		 
+		System.out.println("Enter the height of rectangle: ");
+		t.height=sc.nextFloat();
+		System.out.println("Enter the width of the rectangle: ");
+		t.base=sc.nextFloat();
+		
+		float a2=t.Area(t.base,t.height);
+		System.out.println("Enter the radius of circle: ");
+		t.radius=sc.nextFloat();
+		double a3=t.Area(t.radius);
+		 t.Area();
+		System.out.println("are of rectangle of height "+t.height+" and width "+t.base+" is "+a2);
+		System.out.println("Area of circle of radius "+t.radius+" is "+a3);
+		sc.close();
+
+	}
+
+}
