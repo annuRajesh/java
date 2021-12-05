@@ -1,0 +1,90 @@
+package lab2;
+
+import java.util.Scanner;
+
+class Employee{
+	String name;
+	int age;
+	String phonenumber;
+	String address;
+	Double salary;
+	void printsalary() {
+		System.out.println("Salary: "+salary);
+	}
+}
+	class Officer extends Employee{
+		private String specialization;
+
+		public String getSpecialization() {
+			return specialization;
+		}
+
+		public void setSpecialization(String specialization) {
+			this.specialization = specialization;
+		}
+		
+		
+		
+		
+	}
+	class Manager extends Employee{
+		private String department;
+		public String getdepartment() {
+			return department;
+		}
+		public void setdepartment(String department) {
+			this.department=department;
+		}
+		
+		
+	}
+
+
+public class EmployeeList {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		Employee o=new Officer();
+		
+		System.out.println("Name of the employee:");
+		o.name=sc.next();
+		System.out.println("Age of the employee:");
+		o.age=sc.nextInt();
+		System.out.println("phone number  of the employee:");
+		o.phonenumber=sc.next();
+		System.out.println("Salary of the employee:");
+		o.salary=sc.nextDouble();
+		System.out.println("Specialization: ");
+		Officer e=new Officer();
+		System.out.println("specialization: ");
+		e.getSpecialization();
+		Employee m=new Manager();
+		System.out.println("Name of the employee:");
+		m.name=sc.next();
+		System.out.println("Age of the employee:");
+		m.age=sc.nextInt();
+		System.out.println("phonenumber of the employee:");
+		m.phonenumber=sc.next();
+		System.out.println("Salary of the employee:");
+		m.salary=sc.nextDouble();
+		System.out.println("Employee details: ");
+		System.out.println("Nmae: "+o.name);
+		System.out.println("age "+o.age);
+		System.out.println("address: "+o.address);
+		System.out.println("Phone number:  "+o.phonenumber);
+		System.out.println("specialization:"+e.getSpecialization());
+		o.printsalary();
+		System.out.println("Employee details: ");
+		System.out.println("Nmae: "+m.name);
+		System.out.println("age "+m.age);
+		System.out.println("address: "+m.address);
+		System.out.println("Phone number:  "+m.phonenumber);
+		m.printsalary();
+		sc.close();
+		
+		
+
+	}
+
+}
