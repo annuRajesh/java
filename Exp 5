@@ -1,4 +1,4 @@
-package lab2;
+package lab21;
 
 import java.util.Scanner;
 
@@ -7,84 +7,79 @@ class Employee{
 	int age;
 	String phonenumber;
 	String address;
-	Double salary;
+	double salary;
 	void printsalary() {
 		System.out.println("Salary: "+salary);
 	}
+	
 }
-	class Officer extends Employee{
-		private String specialization;
-
-		public String getSpecialization() {
-			return specialization;
-		}
-
-		public void setSpecialization(String specialization) {
-			this.specialization = specialization;
-		}
-		
-		
-		
-		
-	}
-	class Manager extends Employee{
-		private String department;
-		public String getdepartment() {
-			return department;
-		}
-		public void setdepartment(String department) {
-			this.department=department;
-		}
-		
-		
-	}
-
+class Officer extends Employee{
+	 String specialization;
+	 void officer(){
+		 System.out.println("OFFICER DETAILS: ");
+			System.out.println("Name: "+name);
+			System.out.println("Age: "+age);
+			System.out.println("Phone number: "+phonenumber);
+			System.out.println("Address: "+address);
+			System.out.println("Specialization: "+specialization);
+		 
+	 }
+}
+class Manager extends Employee{
+	 String department;
+	 void manager() {
+		 System.out.println("MANAGER DETAILS: ");
+			System.out.println("Name: "+name);
+			System.out.println("Age: "+age);
+			System.out.println("Phone number: "+phonenumber);
+			System.out.println("Address: "+address);
+			System.out.println("Department: "+department);
+		 
+		 
+	 }
+}
 
 public class EmployeeList {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		Officer ob=new Officer();
+		System.out.println("Enter the name of the employee: ");
 		Scanner sc=new Scanner(System.in);
-		Employee o=new Officer();
-		
-		System.out.println("Name of the employee:");
-		o.name=sc.next();
-		System.out.println("Age of the employee:");
-		o.age=sc.nextInt();
-		System.out.println("phone number  of the employee:");
-		o.phonenumber=sc.next();
-		System.out.println("Salary of the employee:");
-		o.salary=sc.nextDouble();
-		System.out.println("Specialization: ");
-		Officer e=new Officer();
-		System.out.println("specialization: ");
-		e.getSpecialization();
-		Employee m=new Manager();
-		System.out.println("Name of the employee:");
-		m.name=sc.next();
-		System.out.println("Age of the employee:");
-		m.age=sc.nextInt();
-		System.out.println("phonenumber of the employee:");
-		m.phonenumber=sc.next();
-		System.out.println("Salary of the employee:");
-		m.salary=sc.nextDouble();
-		System.out.println("Employee details: ");
-		System.out.println("Nmae: "+o.name);
-		System.out.println("age "+o.age);
-		System.out.println("address: "+o.address);
-		System.out.println("Phone number:  "+o.phonenumber);
-		System.out.println("specialization:"+e.getSpecialization());
-		o.printsalary();
-		System.out.println("Employee details: ");
-		System.out.println("Nmae: "+m.name);
-		System.out.println("age "+m.age);
-		System.out.println("address: "+m.address);
-		System.out.println("Phone number:  "+m.phonenumber);
-		m.printsalary();
+		ob.name=sc.nextLine();
+		System.out.println("Enter the age  of the employee: ");
+		ob.age=sc.nextInt();
+		System.out.println("Enter the phone number: ");
+		ob.phonenumber=sc.next();
+		System.out.println("Enter the address: ");
+		ob.address=sc.next();
+		System.out.println("Enter specialization: ");
+		ob.specialization=sc.next();
+		System.out.println("Enter the salary: ");
+		ob.salary=sc.nextInt();
+		Manager ab=new Manager();
+		System.out.println("Enter the name of the employee: ");
+		ab.name=sc.next();
+		System.out.println("  ");
+		System.out.println("Enter the age  of the employee: ");
+		ab.age=sc.nextInt();
+		System.out.println("Enter the phone number: ");
+		ab.phonenumber=sc.next();
+		System.out.println("Enter the address: ");
+		ab.address=sc.next();
+		System.out.println("Enter the department: ");
+		ab.department=sc.next();
+		System.out.println("Enter the salary: ");
+		ab.salary=sc.nextInt();
+		ob.officer();
+		ob.printsalary();
+		System.out.println("  ");
+		ab.manager();
+		ab.printsalary();
 		sc.close();
 		
 		
-
+		
 	}
 
 }
