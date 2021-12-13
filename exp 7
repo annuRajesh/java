@@ -1,0 +1,45 @@
+package lab21;
+abstract class Shape{
+	abstract void  numberofSides();
+		
+	
+}
+class Rectangle extends Shape{
+	void  numberofSides() {
+		System.out.println("I am Rectangle,I have 4 sides");
+	}
+	
+}
+class Triangle extends Shape{
+	void  numberofSides() {
+		System.out.println("I am Triangle,I have 3 sides");
+	}
+}
+class Hexagon extends Shape{
+	void  numberofSides() {
+		System.out.println("I am Hexagon,I have 6 sides");
+	}
+}
+
+public class Shape111 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	  /*  Shape s=new Triangle();
+	    s.numberofSides();
+	    Shape q=new Rectangle();
+	    q.numberofSides();
+	    Shape m=new Hexagon();
+	    m.numberofSides();*/
+		Shape s;
+		
+		s=new Rectangle();
+		s.numberofSides();
+		s=new Triangle();
+		s.numberofSides();
+		s=new Hexagon();
+		s.numberofSides();
+
+	}
+
+}
